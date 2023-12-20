@@ -1,0 +1,331 @@
+/* ------------------------------- 1. Global Styles -------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Poppins:wght@300;400;800&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Oleo+Script+Swash+Caps&family=Poppins:wght@300;400;800&family=Roboto&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Merriweather, 'Times New Roman', serif;
+}
+
+h1 {
+    padding: 16px 0;
+}
+
+h4 {
+    font-size: 38px;
+}
+
+h6 {
+    font-size: 34px;
+    font-weight: 500;
+    padding: 16px 0;
+}
+
+h7 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+/* Paars #5722CD;
+Blauw #4845E4;
+Roze #ED4385;
+Zwart #0C0C0C (voor standaard tekst);
+Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services")
+Uitzonderingen:
+Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)
+Grijs #7A7A7A (voor de service-tegel tekst); */
+
+/* --------------- 3.1 Reusables ----------------------- */
+.outer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+
+.inner-container {
+    flex-basis: 1600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    flex-shrink: 1;
+    flex-grow: 0;
+}
+
+a,
+a:visited,
+a:link {
+    text-decoration: none;
+    color: #5722CD;
+}
+
+.header-navigation a {
+    color: white;
+}
+
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+#header {
+    background: #4B49E8;
+    background: linear-gradient(129deg, #4B49E8 0%, #4B49E8 26%, #5722CD 100%);
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+
+.header-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
+    width: 100%;
+}
+
+.header-navigation ul {
+    font-size: 18px;
+    flex-basis: 350px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-text {
+    width: 60%;
+    padding: 100px 0 140px 0;
+    margin-bottom: 60px;
+    font-size: 28px;
+    text-align: center;
+
+}
+
+.header-text button {
+    border-radius: 40px;
+    border: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    padding: 20px 45px;
+    color: white;
+    background-color: #ED4385;
+}
+
+p {
+    margin: 12px 0 34px 0;
+}
+
+.squiggle-line {
+    position: absolute;
+    bottom: 0;
+    margin: 10px 0 0 0;
+}
+
+/* --------------- 4.2 Introduction ------------------- */
+#intro {
+    background-color: white;
+    color: #5722CD;
+    padding: 30px 0;
+}
+
+#intro p {
+    font-size: 16px;
+}
+
+.question-text {
+    color: #0c0c0c;
+    font-weight: 500;
+    margin-top: 100px;
+}
+
+.extra-container {
+    max-width: 800px;
+    text-align: center;
+}
+
+/* --------------- 4.3 Work ------------------- */
+#work {
+    background-color: #F3F6F9;
+}
+
+.work-extra-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+    margin: 50px 0;
+}
+
+
+.work-content-wrapper {
+    padding: 0 50px;
+    flex-basis: 500px;
+}
+
+.work-content-wrapper h4,
+img,
+p {
+    margin-bottom: 40px;
+}
+
+.img-wrapper {
+    justify-content: flex-end;
+    flex-basis: 950px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.img-wrapper img {
+    width: 100%;
+    box-shadow: 0 32px 28px -10px rgba(0, 0, 0, 0.22);
+}
+
+.variety-container {
+    flex-direction: row-reverse;
+}
+
+.rolling-stone-container {
+    margin-top: 80px;
+}
+
+/* --------------- 4.4 Services ------------------- */
+.article-square {
+    display: flex;
+    flex-basis: 390px;
+    min-width: 390px;
+    flex-direction: column;
+    margin: 25px 20px;
+    border: #5722CD solid 1px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    padding: 20px 42px;
+    max-height: 365px;
+    box-shadow: 3px 8px 10px rgba(0, 0, 0, 0.15);
+}
+
+.article-square p {
+    font-size: 16px;
+}
+
+.inner-container__service-grid {
+    flex-basis: 1600px;
+    margin: 0 20px;
+    padding: 80px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.services-img {
+    max-width: 80px;
+    margin-bottom: 10px;
+}
+
+/* --------------- 4.5 Support ------------------- */
+#contact {
+    color: white;
+    background: #4B49E8;
+    background: linear-gradient(129deg, #4B49E8 0%, #4B49E8 26%, #5722CD 100%);
+    padding: 40px 0;
+}
+
+.contact-form {
+    width: 60%;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    background-color: #ffffff;
+    border: 1px solid #7A7A7A;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    padding: 18px;
+    display: block;
+    font-size: 14px;
+    color: #7A7A7A;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.extra-container-contact h3 {
+    font-size: 44px;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.contact-form button {
+    align-self: center;
+    padding: 14px 48px;
+    border: none;
+    border-radius: 50px;
+    background-color: #ED4385;
+    color: white;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.20);
+}
+
+#footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (max-width: 576px) {
+    .header-text {
+        width: 110%;
+        padding: 100px 0 140px 0;
+        margin-bottom: 60px;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .img-wrapper {
+        justify-content: flex-end;
+        flex-basis: 950px;
+        flex-grow: 0;
+        flex-shrink: 1;
+        margin-top: 40px;
+    }
+
+    .contact-form {
+        width: 80%;
+    }
+}
+
